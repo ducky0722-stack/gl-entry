@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>葛朗進貨</title>
+<link rel="apple-touch-icon" href="https://enhance-determines-achieving-ahead.trycloudflare.com/icon-180.png">
+<style>
+  body{margin:0;height:100vh;display:grid;place-items:center;
+    font-family:-apple-system,"PingFang TC",sans-serif;background:#F6F3EE;color:#2C2823}
+  .box{text-align:center;padding:28px}
+  .n{font-size:18px;font-weight:600;margin:14px 0 6px}
+  .m{font-size:13.5px;color:#6B6259;line-height:1.7}
+  a{color:#41573E}
+  .mark{width:52px;height:52px;border-radius:16px;background:#EBF1E8;color:#41573E;
+    display:grid;place-items:center;margin:0 auto;font-weight:700;font-size:20px}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="mark">葛</div>
+  <div class="n">正在開啟葛朗進貨…</div>
+  <div class="m" id="msg">如果畫面沒有自動跳轉，請點<a id="go" href="https://enhance-determines-achieving-ahead.trycloudflare.com/index.html">這裡</a>。<br>
+  總部：<a href="https://enhance-determines-achieving-ahead.trycloudflare.com/studio-hq.html">工作室</a>　<a href="https://enhance-determines-achieving-ahead.trycloudflare.com/hq.html">採購</a></div>
+</div>
+<script>
+  var T = "https://enhance-determines-achieving-ahead.trycloudflare.com";
+  var t = new URLSearchParams(location.search).get("to");
+  if (t === "hq") location.replace(T + "/studio-hq.html");
+  else if (t === "erp") location.replace(T + "/hq.html");
+  else location.replace(T + "/index.html");
+  setTimeout(function(){
+    document.getElementById("msg").innerHTML =
+      "目前的服務位置：<a href='" + T + "/index.html'>" + T.replace("https://","") + "</a><br>" +
+      "若一直無法開啟，代表 Mac 端的服務重啟中，請稍後再試。";
+  }, 3500);
+</script>
+</body>
+</html>
